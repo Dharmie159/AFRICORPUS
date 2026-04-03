@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AFRICORPUS — The Digital Heartbeat of Africa</title>
+<title>Team — AFRICORPUS</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -29,18 +29,6 @@ body{font-family:var(--sans);background:var(--obsidian);color:var(--mist);overfl
 ::-webkit-scrollbar-track{background:var(--obsidian)}
 ::-webkit-scrollbar-thumb{background:var(--terra)}
 
-.partners-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.partner-card{border:1px solid rgba(255,255,255,0.05);padding:26px 20px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,background .2s}
-.partner-card:hover{border-color:rgba(230,180,76,0.15);background:rgba(255,255,255,0.016)}
-.partner-logo-wrap{width:100%;height:56px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:4px}
-.partner-logo-wrap img{max-height:48px;max-width:140px;object-fit:contain;display:block;filter:brightness(0) invert(1);opacity:0.75;transition:opacity .2s}
-.partner-card:hover .partner-logo-wrap img{opacity:1}
-.partner-logo-fallback{font-family:var(--display);font-size:18px;font-weight:700;color:var(--gold);width:56px;height:56px;border:1px solid rgba(230,180,76,0.2);border-radius:4px;display:flex;align-items:center;justify-content:center}
-.partner-name{font-family:var(--display);font-size:16px;font-weight:600;color:var(--mist);letter-spacing:-0.01em}
-.partner-type{font-family:var(--sans);font-size:8px;font-weight:400;letter-spacing:0.2em;color:var(--terra);text-transform:uppercase}
-.partner-desc{font-family:var(--sans);font-size:12.5px;font-weight:300;color:var(--ash);line-height:1.6}
-.partners-note{margin-top:36px;padding:26px 30px;background:rgba(230,180,76,0.03);border:1px solid rgba(230,180,76,0.1)}
-.partners-note-text{font-family:var(--sans);font-size:15px;font-weight:300;color:var(--mist);line-height:1.65}
 /* ══ NAV ══ */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
@@ -288,10 +276,6 @@ footer{background:var(--obsidian);padding:56px 48px 32px;border-top:1px solid rg
   footer{padding:44px 22px 28px}
   .work-grid,.footer-top{grid-template-columns:1fr 1fr}
   .involved-contact-row{flex-direction:column;align-items:flex-start}
-  @media (max-width: 768px) {
-  .work-grid {
-    grid-template-columns: 1fr;
-  }
 }
 @media(max-width:480px){
   .footer-top{grid-template-columns:1fr}
@@ -299,137 +283,73 @@ footer{background:var(--obsidian);padding:56px 48px 32px;border-top:1px solid rg
 
 /* ══ PAGE-SPECIFIC STYLES ══ */
 
-/* ══ HERO ══ */
-#hero{
-  min-height:90vh;
-  display:flex;flex-direction:column;justify-content:center;
-  padding:120px 48px 80px;
-  position:relative;overflow:hidden;
-}
-.hero-bg{
-  position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 65% 55% at 70% 30%,rgba(192,80,42,0.13) 0%,transparent 60%),
-    radial-gradient(ellipse 40% 40% at 10% 75%,rgba(139,58,26,0.07) 0%,transparent 55%),
-    var(--obsidian);
-}
-.hero-grain{
-  position:absolute;inset:0;opacity:0.032;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-repeat:repeat;background-size:128px;
-}
-.hero-content{position:relative;z-index:2;max-width:820px}
-h1.hero-title{
-  font-family:var(--display);
-  font-size:clamp(54px,8.5vw,120px);
-  font-weight:600;line-height:0.92;letter-spacing:-0.03em;
-  color:var(--mist);margin-bottom:32px;
-}
-h1.hero-title em{font-style:normal;color:var(--gold)}
-.hero-sub{
-  font-family:var(--sans);font-size:17px;font-weight:300;
-  color:var(--ash);max-width:520px;line-height:1.75;margin-bottom:44px;
-}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+#team{background:var(--obsidian)}
+.team-founders{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-bottom:2px}
+.team-members{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
 
-/* ══ HERO IMAGE ══ */
-.hero-image-band{width:100%;overflow:hidden;line-height:0}
-.hero-image-band img{width:100%;height:480px;object-fit:cover;display:block}
-.hero-img-fallback{
-  width:100%;height:480px;
-  background:linear-gradient(135deg,var(--warm-panel) 0%,var(--warm-dark) 50%,rgba(192,80,42,0.07) 100%);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
-  position:relative;overflow:hidden;
+.team-card-founder{
+  background:rgba(192,80,42,0.07);
+  border-top:2px solid var(--terra);
+  padding:32px 28px;
+  display:grid;grid-template-columns:88px 1fr;gap:24px;
+  align-items:start;transition:background .3s;
 }
-.hero-img-fallback::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 60% 70% at 30% 50%,rgba(192,80,42,0.07) 0%,transparent 65%);
-}
-.fallback-icon{width:52px;height:52px;border-radius:50%;border:1px solid rgba(230,180,76,0.2);display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
-.fallback-label{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;color:rgba(190,184,168,0.35);position:relative;z-index:1}
-.fallback-hint{font-family:var(--sans);font-size:12px;font-weight:300;color:rgba(190,184,168,0.22);position:relative;z-index:1;max-width:340px;text-align:center;line-height:1.6}
+.team-card-founder:hover{background:rgba(192,80,42,0.1)}
 
-/* ══ PROBLEM ══ */
-#problem{background:var(--obsidian);position:relative;overflow:hidden}
-#problem::before{
-  content:'';position:absolute;right:-160px;top:-80px;
-  width:480px;height:480px;border-radius:50%;
-  background:radial-gradient(circle,rgba(192,80,42,0.05) 0%,transparent 70%);
-  pointer-events:none;
+.team-photo{
+  width:88px;height:88px;border-radius:50%;overflow:hidden;
+  background:linear-gradient(135deg,var(--terra),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-size:24px;font-weight:600;
+  color:var(--obsidian);flex-shrink:0;
 }
-.problem-header{margin-bottom:48px}
-.problem-stats-row{display:flex;gap:2px;margin-bottom:60px}
-.problem-stat{flex:1;padding:28px 24px;background:var(--warm-panel);border-top:2px solid var(--terra)}
-.problem-stat-num{font-family:var(--display);font-size:48px;font-weight:600;color:var(--gold);line-height:1;letter-spacing:-0.02em;margin-bottom:8px}
-.problem-stat-label{font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ash);margin-bottom:6px}
-.problem-stat-desc{font-family:var(--sans);font-size:12px;font-weight:300;color:rgba(190,184,168,0.55);line-height:1.55}
-.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-.problem-right{display:flex;flex-direction:column;gap:28px}
-.problem-card{border-left:2px solid var(--terra);padding-left:22px}
-.problem-card-num{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:0.2em;color:var(--terra);margin-bottom:7px}
-.problem-card h3{font-family:var(--display);font-size:22px;font-weight:600;color:var(--mist);margin-bottom:7px;line-height:1.1;letter-spacing:-0.01em}
-.problem-card p{font-family:var(--sans);font-size:13px;font-weight:300;color:var(--ash);line-height:1.72}
+.team-photo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
 
-/* ══ ABOUT TEASER ══ */
-#about-teaser{background:var(--warm-dark);position:relative;overflow:hidden}
-#about-teaser::before{
-  content:'';position:absolute;left:-100px;bottom:-100px;
-  width:400px;height:400px;border-radius:50%;
-  background:radial-gradient(circle,rgba(230,180,76,0.04) 0%,transparent 70%);
-  pointer-events:none;
+.team-photo-sm{
+  width:72px;height:72px;border-radius:50%;overflow:hidden;
+  background:linear-gradient(135deg,var(--terra),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-size:18px;font-weight:600;
+  color:var(--obsidian);flex-shrink:0;margin-bottom:16px;
 }
-.about-teaser-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-teaser-quote{
-  font-family:var(--serif);font-size:clamp(22px,3vw,36px);
-  font-weight:300;font-style:italic;line-height:1.35;
-  color:var(--mist);padding:40px;
-  border-left:3px solid var(--gold);
-  background:rgba(255,255,255,0.02);
+.team-photo-sm img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+
+.team-card-role{
+  font-family:var(--sans);font-size:8.5px;font-weight:400;
+  letter-spacing:0.2em;color:var(--terra);text-transform:uppercase;margin-bottom:5px;
 }
-.about-teaser-quote em{color:var(--gold)}
-.about-teaser-right{}
-.about-teaser-right .section-body{margin-bottom:16px}
-.about-teaser-right .section-body:last-of-type{margin-bottom:32px}
+.team-card-founder h3{
+  font-family:var(--display);font-size:20px;font-weight:600;
+  color:var(--mist);margin-bottom:8px;letter-spacing:-0.01em;
+}
+.team-card-founder p{
+  font-family:var(--sans);font-size:12.5px;font-weight:300;
+  color:var(--ash);line-height:1.65;
+}
+.team-card-member{
+  background:var(--warm-panel);padding:24px 20px;transition:background .3s;
+}
+.team-card-member:hover{background:rgba(36,28,20,0.85)}
+.team-card-member h3{
+  font-family:var(--display);font-size:16px;font-weight:600;
+  color:var(--mist);margin-bottom:5px;letter-spacing:-0.01em;
+}
+.team-card-member p{
+  font-family:var(--sans);font-size:12px;font-weight:300;
+  color:var(--ash);line-height:1.6;
+}
+.team-intro{max-width:560px;margin-bottom:56px}
 
-/* ══ WORK TEASER ══ */
-#work-teaser{background:var(--obsidian)}
-.work-teaser-intro{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-bottom:52px;align-items:end}
-.work-teaser-cta{margin-top:32px;text-align:center}
-
-/* ══ PARTNERS ══ */
-#partners{background:var(--warm-dark)}
-/* ══ RESPONSIVE ══ */
 @media(max-width:960px){
-  #hero{padding:90px 22px 40px}
-  .hero-image-band img,.hero-img-fallback{height:260px}
-  .problem-stats-row{flex-direction:column;gap:2px}
-  .problem-grid,.about-teaser-grid,.work-teaser-intro{grid-template-columns:1fr;gap: 20px}
-  .about-teaser-quote{padding:28px}
+  .team-founders{grid-template-columns:1fr}
+  .team-members{grid-template-columns:repeat(2,1fr)}
+  .team-card-founder{grid-template-columns:1fr;gap:16px}
+  .team-photo{width:96px;height:96px;font-size:26px}
+  .team-photo-sm{width:80px;height:80px;font-size:20px}
 }
 @media(max-width:480px){
-  h1.hero-title{font-size:clamp(60px,12vw,80px)}
+  .team-members{grid-template-columns:1fr}
 }
-.partner-ticker-band{
-  width:100%;overflow:hidden;position:relative;
-  padding:50px 0;background:var(--warm-dark);
-}
-.partner-ticker-band::before{
-  content:'';position:absolute;top:0;bottom:0;left:0;width:80px;
-  background:linear-gradient(to right,var(--warm-dark),transparent);z-index:1;
-}
-.partner-ticker-band::after{
-  content:'';position:absolute;top:0;bottom:0;right:0;width:80px;
-  background:linear-gradient(to left,var(--warm-dark),transparent);z-index:1;
-}
-.partner-ticker{
-  display:flex;align-items:center;gap:72px;
-  white-space:nowrap;width:max-content;
-}
-.partner-ticker img{
-  height:clamp(80px, 6vw, 100px);width:auto;object-fit:contain;
-  flex-shrink:0;transition:opacity .2s;
-}
-.partner-ticker img:hover{opacity:1}
 
 </style>
 </head>
@@ -451,195 +371,92 @@ h1.hero-title em{font-style:normal;color:var(--gold)}
     </svg>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="work.html">Our Work</a></li>
-    <li><a href="team.html">Team</a></li>
+    <li><a href="team.html" class="active">Team</a></li>
     <li><a href="partners.html">Partners</a></li>
   </ul>
-  <a href="#involved" class="nav-cta">Get in Touch</a>
+  <a href="index.html#involved" class="nav-cta">Get in Touch</a>
   <button class="nav-mobile-toggle" aria-label="Menu">
     <div class="hamburger"><span></span><span></span><span></span></div>
   </button>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grain"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">
-      The Digital<br>
-      <em>Heartbeat</em><br>
-      of Africa
-    </h1>
-    <p class="hero-sub">Africa has over 2,000 languages. Most AI systems know fewer than 10. AFRICORPUS exists to close that gap — preserving the continent's cultural memory and building the AI infrastructure that speaks Africa's truth.</p>
-    <div class="hero-actions">
-      <a href="work.html" class="btn-primary">Explore Our Work</a>
-      <a href="#involved" class="btn-ghost">Get in Touch</a>
-    </div>
-  </div>
-</section>
-
-<!-- HERO IMAGE -->
-<div class="hero-image-band">
-  <img src="images/hero-photo.jpg"
-       alt="AFRICORPUS — Cultural heritage documentation"
-       onerror="this.parentElement.innerHTML='<div class=\'hero-img-fallback\'><div class=\'fallback-icon\'><svg width=\'22\' height=\'22\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#E6B44C\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><polyline points=\'21,15 16,10 5,21\'/></svg></div><div class=\'fallback-label\'>Hero Image</div><div class=\'fallback-hint\'>Add images/hero-photo.jpg beside this HTML file</div></div>'">
-</div>
-
-<!-- TICKER -->
-<div class="statement-band">
-  <div class="statement-ticker">
-    <div class="ticker-item">Digitising Cultural Heritage</div>
-    <div class="ticker-item">Building African Language Models</div>
-    <div class="ticker-item">Preserving Oral Traditions</div>
-    <div class="ticker-item">Empowering Indigenous Communities</div>
-    <div class="ticker-item">Closing the AI Representation Gap</div>
-    <div class="ticker-item">Reconstructing Historical Sites in VR</div>
-    <div class="ticker-item">Documenting Endangered Languages</div>
-    <div class="ticker-item">Digitising Cultural Heritage</div>
-    <div class="ticker-item">Building African Language Models</div>
-    <div class="ticker-item">Preserving Oral Traditions</div>
-    <div class="ticker-item">Empowering Indigenous Communities</div>
-    <div class="ticker-item">Closing the AI Representation Gap</div>
-    <div class="ticker-item">Reconstructing Historical Sites in VR</div>
-    <div class="ticker-item">Documenting Endangered Languages</div>
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-label">The People</div>
+    <h1 class="page-title">Meet the<br><em>Team</em></h1>
+    <p class="page-sub">Built by researchers, designers, and practitioners who understand both the depth of what Africa stands to lose and the precision required to prevent it.</p>
   </div>
 </div>
 
-<!-- PROBLEM -->
-<section id="problem">
-  <div class="problem-header fade-up">
-    <div class="section-label">The Problem</div>
-    <h2 class="section-title">Africa's Heritage<br>is <em>Vanishing</em></h2>
-  </div>
-  <div class="problem-stats-row">
-    <div class="problem-stat fade-up">
-      <div class="problem-stat-num">2,000+</div>
-      <div class="problem-stat-label">African Languages</div>
-      <div class="problem-stat-desc">The most linguistically diverse continent on earth — and the most underrepresented in AI.</div>
-    </div>
-    <div class="problem-stat fade-up">
-      <div class="problem-stat-num">&lt; 10</div>
-      <div class="problem-stat-label">Represented in Global AI</div>
-      <div class="problem-stat-desc">Of those 2,000+ languages, fewer than ten have meaningful presence in leading AI systems.</div>
-    </div>
-    <div class="problem-stat fade-up">
-      <div class="problem-stat-num">97%</div>
-      <div class="problem-stat-label">Absent from Training Data</div>
-      <div class="problem-stat-desc">The vast majority of African languages have no significant footprint in global AI training datasets.</div>
-    </div>
-  </div>
-  <div class="problem-grid">
-    <div class="problem-left fade-up">
-      <p class="section-body">Every two weeks, a language dies somewhere in the world. In Africa, the pace of cultural loss is accelerating. Modernisation, conflict, and a near-total absence of digital infrastructure are erasing what took millennia to build.</p>
-    </div>
-    <div class="problem-right">
-      <div class="problem-card fade-up">
-        <div class="problem-card-num">01</div>
-        <h3>Endangered Languages</h3>
-        <p>Over 300 African languages are classified as endangered. When a language disappears, entire systems of botanical knowledge, legal tradition, and cosmology go with it — irretrievably.</p>
+<!-- TEAM -->
+<section id="team">
+  <div class="team-founders">
+    <div class="team-card-founder fade-up">
+      <div class="team-photo">
+        <img src="images/john-eze.jpg" alt="John Eze" onerror="this.outerHTML='JE'">
       </div>
-      <div class="problem-card fade-up">
-        <div class="problem-card-num">02</div>
-        <h3>Undigitised Artifacts</h3>
-        <p>Museums across the continent hold millions of objects with minimal documentation. Without digitisation, artifacts deteriorate without record. Their stories exist only in ageing memory.</p>
+      <div>
+        <div class="team-card-role">Co-Founder · AI/ML Researcher</div>
+        <h3>John Eze</h3>
+        <p>John is a machine learning researcher whose work sits at the intersection of low-resource NLP and African linguistic systems. He has spent years studying why existing language models fail African users — and building the data infrastructure to fix it. AFRICORPUS is the institutional expression of that research. John leads the organisation's overall direction and research strategy.</p>
       </div>
-      <div class="problem-card fade-up">
-        <div class="problem-card-num">03</div>
-        <h3>Disappearing Traditions</h3>
-        <p>Sacred ceremonies, performance arts, and oral histories are held by ageing custodians. Once they are gone, the knowledge will not be lost — it will simply cease to exist.</p>
+    </div>
+    <div class="team-card-founder fade-up">
+      <div class="team-photo">
+        <img src="images/chris-adeyemi.jpg" alt="Chris Adeyemi" onerror="this.outerHTML='CA'">
       </div>
-      <div class="problem-card fade-up">
-        <div class="problem-card-num">04</div>
-        <h3>The AI Gap</h3>
-        <p>Global AI systems trained predominantly on Western data fail African users in translation, speech recognition, and cultural reasoning. Africa is being written out of the intelligence revolution.</p>
+      <div>
+        <div class="team-card-role">Co-Founder · AI/ML Researcher</div>
+        <h3>Chris Adeyemi</h3>
+        <p>Chris is an AI researcher and computational linguist with deep expertise in speech recognition, tonal language modelling, and cultural knowledge representation. A foundational conviction drives his work: a model cannot serve a culture it does not understand, so understanding must come first. Chris leads the technical architecture of all AFRICORPUS AI systems.</p>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ABOUT TEASER -->
-<section id="about-teaser">
-  <div class="about-teaser-grid">
-    <div class="about-teaser-quote fade-up">
-      "The soul of Africa is not in danger of being forgotten.<br>
-      It is in danger of being erased before it is ever truly <em>known.</em><br>
-      We are here to ensure it is known."
-    </div>
-    <div class="about-teaser-right fade-up">
-      <div class="section-label" style="margin-top:32px">Who We Are</div> 
-      <h2 class="section-title">Built for<br><em>Africa</em></h2>
-      <p class="section-body">AFRICORPUS was founded on a simple but urgent observation: Africa's cultural heritage is disappearing faster than it is being documented, and the global AI revolution is happening without Africa's knowledge, languages, or perspectives at the centre.</p>
-      <p class="section-body" style="margin-top:16px">We are not an NGO preserving the past out of sentiment. We are a technology institution building the infrastructure that will allow Africa to author its own future.</p>
-      <a href="about.html" class="btn-ghost" style="margin-top:32px">Our Full Story →</a>
-    </div>
-  </div>
-</section>
-
-<!-- WORK TEASER -->
-<section id="work-teaser">
-  <div class="work-teaser-intro">
-    <div class="fade-up">
-      <div class="section-label">Our Work</div>
-      <h2 class="section-title">Active<br><em>Projects</em></h2>
-    </div>
-    <div class="fade-up">
-      <p class="section-body">Live initiatives — in the field, in progress, in partnership with communities. Every project listed here represents real work, not intent.</p>
-    </div>
-  </div>
-  <div class="work-grid">
-    <div class="work-card fade-up">
-      <div class="work-card-img">
-        <img src="images/project-yoruba.jpg" alt="The Yoruba Corpus Initiative"
-             onerror="this.parentElement.innerHTML='<div class=\'work-card-img-fallback\'><span>Project Photo</span></div>'">
+  <div class="team-members" style="margin-top:2px">
+    <div class="team-card-member fade-up">
+      <div class="team-photo-sm">
+        <img src="images/team-amara.jpg" alt="Amara Mensah" onerror="this.outerHTML='AM'">
       </div>
-      <div class="work-card-body">
-        <div class="work-card-status"><span class="status-dot"></span><span style="color:var(--gold)">Active</span></div>
-        <h3>The Yoruba Corpus Initiative</h3>
-        <p>Building the largest open-access linguistic dataset for Yoruba — tonal annotations, proverbs, oral literature, and spoken audio from native speakers across Nigeria and the diaspora.</p>
-        <div style="margin-bottom:10px"><span class="work-card-tag">Language</span><span class="work-card-tag">Nigeria</span><span class="work-card-tag">NLP</span></div>
-        <div class="work-card-meta">Phase 2 of 4 · 12 Community Partners</div>
-      </div>
+      <div class="team-card-role">AI/ML Engineer</div>
+      <h3>Amara Mensah</h3>
+      <p>Builds and trains the core language models and classification systems at the heart of the AFRICORPUS platform.</p>
     </div>
-    <div class="work-card fade-up">
-      <div class="work-card-img">
-        <img src="images/project-benin.jpg" alt="Benin Bronze Digital Archive"
-             onerror="this.parentElement.innerHTML='<div class=\'work-card-img-fallback\'><span>Project Photo</span></div>'">
+    <div class="team-card-member fade-up">
+      <div class="team-photo-sm">
+        <img src="images/team-fatima.jpg" alt="Fatima Okonkwo" onerror="this.outerHTML='FO'">
       </div>
-      <div class="work-card-body">
-        <div class="work-card-status"><span class="status-dot"></span><span style="color:var(--gold)">Active</span></div>
-        <h3>Benin Bronze Digital Archive</h3>
-        <p>High-resolution 3D scanning and provenance documentation of Benin Bronze works — creating an authoritative, community-verified digital record of one of Africa's most significant artistic traditions.</p>
-        <div style="margin-bottom:10px"><span class="work-card-tag">Artifacts</span><span class="work-card-tag">3D Scan</span><span class="work-card-tag">Benin</span></div>
-        <div class="work-card-meta">340 Objects Catalogued · Ongoing</div>
+      <div class="team-card-role">Product Design Lead</div>
+      <h3>Fatima Okonkwo</h3>
+      <p>Leads design of the AFRICORPUS platform — ensuring every interface serves both technical researchers and community users with equal clarity.</p>
+    </div>
+    <div class="team-card-member fade-up">
+      <div class="team-photo-sm">
+        <img src="images/team-kwame.jpg" alt="Kwame Nkosi" onerror="this.outerHTML='KN'">
       </div>
+      <div class="team-card-role">Brand Design Lead</div>
+      <h3>Kwame Nkosi</h3>
+      <p>Shapes the visual identity and communication design of AFRICORPUS — ensuring the brand honours the cultures it serves.</p>
     </div>
-  </div>
-  <div class="work-teaser-cta fade-up">
-    <a href="work.html" class="btn-ghost">See All Projects →</a>
-  </div>
-</section>
-
-<!-- PARTNERS -->
-<section id="partners">
-    <div class="partner-teaser-intro">
-    <div class="fade-up">
-      <div class="section-label">Our Partners</div>
-      <h2 class="section-title">Trusted By Leading<br><em>Organisations</em></h2>
+    <div class="team-card-member fade-up">
+      <div class="team-photo-sm">
+        <img src="images/team-zara.jpg" alt="Zara Bangura" onerror="this.outerHTML='ZB'">
+      </div>
+      <div class="team-card-role">Head of Community & Field Research</div>
+      <h3>Zara Bangura</h3>
+      <p>Leads on-the-ground partnerships with communities, managing consent frameworks, elder engagement, and field documentation programmes.</p>
     </div>
-  </div>
-  <div class="partner-ticker-band">
-  <div class="partner-ticker">
-    <img src="images/partner-unilag.png" alt="University of Lagos" onerror="this.style.display='none'">
-    <img src="images/partner-nmbc.png" alt="National Museum Benin City" onerror="this.style.display='none'">
-    <img src="images/partner-masakhane.png" alt="Masakhane Research" onerror="this.style.display='none'">
-    <img src="images/partner-sahel-trust.png" alt="Sahel Cultural Trust" onerror="this.style.display='none'">
-  </div>
-</div>
-  <div class="partners-note fade-up">
-    <p class="partners-note-text">We are actively building partnerships with institutions and communities who share our conviction.</p>
+    <div class="team-card-member fade-up">
+      <div class="team-photo-sm">
+        <img src="images/team-david.jpg" alt="David Owusu" onerror="this.outerHTML='DO'">
+      </div>
+      <div class="team-card-role">Data & Partnerships Lead</div>
+      <h3>David Owusu</h3>
+      <p>Manages dataset strategy, institutional data agreements, and the partnerships that give AFRICORPUS access to collections and communities at scale.</p>
+    </div>
   </div>
 </section>
 
@@ -648,10 +465,10 @@ h1.hero-title em{font-style:normal;color:var(--gold)}
   <div class="involved-inner">
     <div class="involved-eyebrow fade-up">Get in Touch</div>
     <h2 class="involved-title fade-up">If what you've read<br>here <em>moves you</em></h2>
-    <p class="involved-body fade-up">The work speaks for itself. If you are a researcher, an institution, a community custodian, or someone who simply believes Africa's story deserves to be told in full — we would like to hear from you. There are no forms here. Just a conversation, when you are ready.</p>
+    <p class="involved-body fade-up">The work speaks for itself. If you are a researcher, an institution, a community custodian, or someone who simply believes Africa's story deserves to be told in full — we would like to hear from you.</p>
     <div class="involved-contact-row fade-up">
-      <div class="involved-email">Write to us at <a href="/cdn-cgi/l/email-protection#6008050c0c0f2001061209030f121015134e0f1207"><span class="__cf_email__" data-cfemail="e58d8089898aa58483978c868a97959096cb8a9782">[email&#160;protected]</span></a></div>
-      <a href="/cdn-cgi/l/email-protection#bed6dbd2d2d1fedfd8ccd7ddd1cccecbcd90d1ccd9" class="btn-dark">Start a Conversation</a>
+      <div class="involved-email">Write to us at <a href="/cdn-cgi/l/email-protection#2c44494040436c4d4a5e454f435e5c595f02435e4b"><span class="__cf_email__" data-cfemail="cda5a8a1a1a28dacabbfa4aea2bfbdb8bee3a2bfaa">[email&#160;protected]</span></a></div>
+      <a href="/cdn-cgi/l/email-protection#97fff2fbfbf8d7f6f1e5fef4f8e5e7e2e4b9f8e5f0" class="btn-dark">Start a Conversation</a>
     </div>
   </div>
 </section>
@@ -681,8 +498,8 @@ h1.hero-title em{font-style:normal;color:var(--gold)}
     <div class="footer-col">
       <h4>Connect</h4>
       <ul>
-        <li><a href="#involved">Get in Touch</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#751d1019191a351413071c161a070500065b1a0712"><span class="__cf_email__" data-cfemail="19717c75757659787f6b707a766b696c6a37766b7e">[email&#160;protected]</span></a></li>
+        <li><a href="index.html#involved">Get in Touch</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#e8808d848487a8898e9a818b879a989d9bc6879a8f"><span class="__cf_email__" data-cfemail="8de5e8e1e1e2cdecebffe4eee2fffdf8fea3e2ffea">[email&#160;protected]</span></a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -701,7 +518,7 @@ h1.hero-title em{font-style:normal;color:var(--gold)}
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const fadeEls = document.querySelectorAll('.fade-up');
 fadeEls.forEach(el => el.classList.add('animate'));
 const io = new IntersectionObserver((entries) => {
@@ -711,100 +528,39 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.07, rootMargin: '0px 0px -24px 0px' });
 fadeEls.forEach(el => io.observe(el));
 
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
-  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
-}, { passive: true });
-
-(function(){
-  const toggle = document.querySelector('.nav-mobile-toggle');
-  const links  = document.querySelector('.nav-links');
-  const cta    = document.querySelector('.nav-cta');
-  if (!toggle || !links) return;
-
-  // Create overlay close button
-  const closeBtn = document.createElement('button');
-  closeBtn.innerHTML = '&#215;';
-  closeBtn.style.cssText = 'position:absolute;top:20px;right:22px;background:none;border:none;color:#F5F0E8;font-size:28px;cursor:pointer;line-height:1;padding:4px 8px;z-index:1001';
-  closeBtn.setAttribute('aria-label','Close menu');
-
-  function openMenu() {
-    links.style.cssText = 'display:flex !important;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(14,12,9,0.98);padding:80px 32px 40px;gap:24px;z-index:1000;overflow-y:auto';
-    links.setAttribute('data-open','true');
-    links.appendChild(closeBtn);
-    if (cta) { cta.style.cssText = 'display:block !important;margin-top:8px;width:fit-content'; links.appendChild(cta); }
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMenu() {
+document.querySelector('.nav-mobile-toggle').addEventListener('click', function () {
+  const links = document.querySelector('.nav-links');
+  const cta   = document.querySelector('.nav-cta');
+  const isOpen = links.getAttribute('data-open') === 'true';
+  if (isOpen) {
+    links.setAttribute('data-open', 'false');
     links.style.cssText = '';
-    links.setAttribute('data-open','false');
-    if (closeBtn.parentNode) closeBtn.parentNode.removeChild(closeBtn);
-    if (cta) { cta.style.cssText = ''; }
+    if (cta) cta.style.cssText = '';
     document.body.style.overflow = '';
-  }
-
-  toggle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    links.getAttribute('data-open') === 'true' ? closeMenu() : openMenu();
-  });
-
-  closeBtn.addEventListener('click', closeMenu);
-
-  // Close when a nav link is clicked
-  links.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A') closeMenu();
-  });
-})();
-(function() {
-  const track = document.querySelector('.partner-ticker');
-  if (!track) return;
-  
-  // Clone the first set and append so we always have enough
-  const items = Array.from(track.children);
-  items.forEach(item => {
-    const clone = item.cloneNode(true);
-    track.appendChild(clone);
-  });
-  items.forEach(item => {
-    const clone = item.cloneNode(true);
-    track.appendChild(clone);
-  });
-  
-  let pos = 0;
-  const speed = 0.5;
-  let singleWidth = 0;
-  
-  function measure() {
-    // Measure only the first third — the original set
-    const allItems = track.children;
-    const count = allItems.length / 3;
-    let w = 0;
-    for (let i = 0; i < count; i++) {
-      const rect = allItems[i].getBoundingClientRect();
-      w += rect.width + parseFloat(getComputedStyle(track).gap || 72);
+  } else {
+    links.setAttribute('data-open', 'true');
+    links.style.cssText = 'display:flex !important;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(14,12,9,0.98);padding:72px 32px 40px;gap:28px;z-index:1000;overflow-y:auto';
+    if (cta) cta.style.cssText = 'display:block !important;margin-top:8px;width:fit-content';
+    document.body.style.overflow = 'hidden';
+    // Add close button if not already present
+    if (!document.querySelector('.nav-close-btn')) {
+      const btn = document.createElement('button');
+      btn.className = 'nav-close-btn';
+      btn.innerHTML = '&times;';
+      btn.style.cssText = 'position:fixed;top:18px;right:22px;z-index:1001;background:none;border:none;color:#F5F0E8;font-size:32px;cursor:pointer;line-height:1;padding:4px';
+      btn.onclick = function() { document.querySelector('.nav-mobile-toggle').click(); this.remove(); };
+      document.body.appendChild(btn);
     }
-    singleWidth = w;
   }
-  
-  function tick() {
-    pos -= speed;
-    if (singleWidth > 0 && Math.abs(pos) >= singleWidth) {
-      pos = pos + singleWidth;
-    }
-    track.style.transform = `translateX(${pos}px)`;
-    requestAnimationFrame(tick);
+});
+// Close menu when nav link clicked
+document.querySelector('.nav-links').addEventListener('click', function(e) {
+  if (e.target.tagName === 'A' && this.getAttribute('data-open') === 'true') {
+    document.querySelector('.nav-mobile-toggle').click();
+    const btn = document.querySelector('.nav-close-btn');
+    if (btn) btn.remove();
   }
-  
-  // Wait for layout to settle then measure and start
-  setTimeout(() => {
-    measure();
-    tick();
-  }, 300);
-})();
+});
 </script>
 </body>
 </html>
