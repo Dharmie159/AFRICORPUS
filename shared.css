@@ -322,3 +322,10 @@ footer{background:var(--obsidian);padding:56px 48px 32px;border-top:1px solid rg
   .footer-top{grid-template-columns:1fr}
   .partners-grid{grid-template-columns:1fr}
 }
+
+/* Home/mobile navigation repair */
+@media(max-width:960px){
+  .nav-links[data-open="true"]{display:flex!important;flex-direction:column;align-items:flex-start;}
+  .nav-links[data-open="true"] li{display:block;width:100%;}
+  .nav-links[data-open="true"] a{display:block;width:100%;font-size:22px;line-height:1.2;}
+}
