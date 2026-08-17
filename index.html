@@ -455,6 +455,21 @@ h1.hero-title em{font-style:normal;color:var(--gold)}
 }
 .partner-ticker img:hover{opacity:1}
 
+
+/* Final partner ticker fixes */
+.partner-ticker-band{overflow:hidden;width:100%;}
+.partner-ticker{display:flex;align-items:center;gap:80px;width:max-content;white-space:nowrap;will-change:transform;animation:partner-marquee 28s linear infinite;}
+.partner-ticker img{height:48px;width:auto;max-width:173px;object-fit:contain;flex:0 0 auto;}
+@keyframes partner-marquee{from{transform:translateX(0)}to{transform:translateX(-33.333333%);}}
+@media(max-width:600px){.partner-ticker{gap:48px;animation-duration:24s}.partner-ticker img{height:39px;max-width:140px}}
+
+/* Partner marquee: three identical sets create a continuous loop */
+.partner-ticker-band{overflow:hidden;width:100%;}
+.partner-ticker{display:flex;align-items:center;width:max-content;white-space:nowrap;will-change:transform;animation:partner-marquee 28s linear infinite;}
+.partner-ticker-set{display:flex;align-items:center;gap:80px;padding-right:80px;flex:0 0 auto;}
+.partner-ticker img{height:48px;width:auto;max-width:173px;object-fit:contain;flex:0 0 auto;}
+@keyframes partner-marquee{from{transform:translateX(0)}to{transform:translateX(-33.333333%);}}
+@media(max-width:600px){.partner-ticker-set{gap:48px;padding-right:48px}.partner-ticker img{height:39px;max-width:140px}.partner-ticker{animation-duration:24s}}
 </style>
 
 <style>
@@ -671,13 +686,27 @@ h1.hero-title em{font-style:normal;color:var(--gold)}
     </div>
   </div>
   <div class="partner-ticker-band">
-  <div class="partner-ticker">
-    <img src="images/partner-unilag.png" alt="University of Lagos" onerror="this.style.display='none'">
-    <img src="images/partner-nmbc.png" alt="National Museum Benin City" onerror="this.style.display='none'">
-    <img src="images/partner-masakhane.png" alt="Masakhane Research" onerror="this.style.display='none'">
-    <img src="images/partner-sahel-trust.png" alt="Sahel Cultural Trust" onerror="this.style.display='none'">
+    <div class="partner-ticker">
+      <div class="partner-ticker-set">
+        <img src="images/partner-unilag.png" alt="University of Lagos" onerror="this.style.display='none'">
+        <img src="images/partner-nmbc.png" alt="National Museum Benin City" onerror="this.style.display='none'">
+        <img src="images/partner-masakhane.png" alt="Masakhane Research" onerror="this.style.display='none'">
+        <img src="images/partner-sahel-trust.png" alt="Sahel Cultural Trust" onerror="this.style.display='none'">
+      </div>
+      <div class="partner-ticker-set" aria-hidden="true">
+        <img src="images/partner-unilag.png" alt="">
+        <img src="images/partner-nmbc.png" alt="">
+        <img src="images/partner-masakhane.png" alt="">
+        <img src="images/partner-sahel-trust.png" alt="">
+      </div>
+      <div class="partner-ticker-set" aria-hidden="true">
+        <img src="images/partner-unilag.png" alt="">
+        <img src="images/partner-nmbc.png" alt="">
+        <img src="images/partner-masakhane.png" alt="">
+        <img src="images/partner-sahel-trust.png" alt="">
+      </div>
+    </div>
   </div>
-</div>
   <div class="partners-note fade-up">
     <p class="partners-note-text">We are actively building partnerships with institutions and communities who share our conviction.</p>
   </div>
@@ -690,8 +719,8 @@ h1.hero-title em{font-style:normal;color:var(--gold)}
     <h2 class="involved-title fade-up">If what you've read<br>here <em>moves you</em></h2>
     <p class="involved-body fade-up">The work speaks for itself. If you are a researcher, an institution, a community custodian, or someone who simply believes Africa's story deserves to be told in full — we would like to hear from you. There are no forms here. Just a conversation, when you are ready.</p>
     <div class="involved-contact-row fade-up">
-      <div class="involved-email">Write to us at <a href="/cdn-cgi/l/email-protection#6008050c0c0f2001061209030f121015134e0f1207"><span class="__cf_email__" data-cfemail="e58d8089898aa58483978c868a97959096cb8a9782">[email&#160;protected]</span></a></div>
-      <a href="/cdn-cgi/l/email-protection#bed6dbd2d2d1fedfd8ccd7ddd1cccecbcd90d1ccd9" class="btn-dark">Start a Conversation</a>
+      <div class="involved-email">Write to us at <a href="mailto:info@africorpus.com">info@africorpus.com</a></div>
+      <a href="mailto:info@africorpus.com" class="btn-dark">Start a Conversation</a>
     </div>
   </div>
 </section>
@@ -722,7 +751,7 @@ h1.hero-title em{font-style:normal;color:var(--gold)}
       <h4>Connect</h4>
       <ul>
         <li><a href="#involved">Get in Touch</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#751d1019191a351413071c161a070500065b1a0712"><span class="__cf_email__" data-cfemail="19717c75757659787f6b707a766b696c6a37766b7e">[email&#160;protected]</span></a></li>
+        <li><a href="mailto:info@africorpus.com">info@africorpus.com</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -781,13 +810,7 @@ window.addEventListener('scroll', () => {
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
   document.addEventListener('keydown',e=>{if(e.key==='Escape') closeMenu();});
 })();;
-(function(){
-  const track=document.querySelector('.partner-ticker');
-  if(!track) return;
-  const items=Array.from(track.children);
-  items.forEach(item=>track.appendChild(item.cloneNode(true)));
-  track.style.animation='partner-scroll 24s linear infinite';
-})();;
+;
 </script>
 </body>
 </html>
